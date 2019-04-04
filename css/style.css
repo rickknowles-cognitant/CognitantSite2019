@@ -8,20 +8,22 @@ body p { text-align: left; }
   position: fixed;
   width: 100%;
   z-index: 1;
+  box-shadow: 0px 2px 3px #888;
 }
 .header-row { display: flex; align-items: center; }
-.header-row .leaf { height: 12vw; transform: translateY(1.25vw);}
-.header-row .header-title img { height: 10vw; }
+.header-row .leaf { height: 12vw; align-self: flex-end; }
+.header-row .header-title img { height: 8vw; }
 .header-row h2 { padding-top: 0.75vw; font-size: 2vw; }
-.header-title { transform: translateX(-4vw); margin-left: auto; margin-right: auto; color: #686321; }
+.header-title { transform: translateX(-5vw); margin-left: auto; margin-right: auto; color: #686321; }
 .hamburger { padding: 0px; }
 .hamburger span { color: white; }
 
 #nav-menu {
   background-color: #fff
 }
-.nav-menu-list { padding: 0px; list-style: none; height: 100vh; display: flex; flex-direction: column; padding-top: 50px; }
-.nav-menu-list li { font-size: 3vw; padding: 10px; }
+.nav-menu-list { padding: 0px; padding-top: 30px; list-style: none; display: flex; flex-direction: column; justify-content: space-around; }
+.nav-menu-list li { font-size: 3.5vh; padding: 15px; }
+.nav-menu-list a { color: #686321; }
 
 #what-we-do {
   padding-top: 12vw;
