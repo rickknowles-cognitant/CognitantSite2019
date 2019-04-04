@@ -12,6 +12,9 @@
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
+    <!-- Jonathon Suh's hamburgers -->
+    <link rel="stylesheet" type="text/css" href="css/hamburger.css" >
+
     <!-- Cognitant CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" >
 
@@ -47,50 +50,54 @@
   <body>
     <!--Header-->
     <div id="header">
-      <div class="container"> <a href="#" />
-        <div class="header-content">
-          <img href="assets/leaf.png" alt="cognitant-leaf"></img>
-          <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#nav-menu" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Link with href
-            </a>
-          </p>
-        </div>
-        <div class="collapse" id="nav-menu">
-          <div class="nav-links">
-            <ul>
-              <li><a href="#mission">Our mission</a></li>
-              <li><a href="#what-we-do">What we do</a></li>
-              <li><a href="#case-studies">Case studies & testimonials</a></li>
-              <li><a href="#partners">Our partners</a></li>
-              <li><a href="#team">Meet the team</a></li>
-              <li><a href="#more">Find out more</a></li>
-            </ul>
+      <div class="container">
+        <div class="header-row">
+          <img class="leaf" src="assets/leaf.png" alt="cognitant-leaf" height="100vw"></img>
+          <div class="header-title">
+            <img src="assets/cognitant.svg" height="50vw">
+            <h2>Your health in 3D</h2>
           </div>
+          <button class="hamburger hamburger--squeeze" type="button" data-toggle="collapse" href="#nav-menu" onclick="toggleActive()">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
+      </div>
+      <div class="collapse" id="nav-menu">
+        <ul class="nav-menu-list">
+          <li><a href="#mission">Our mission</a></li>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#case-studies">Case studies & testimonials</a></li>
+          <li><a href="#partners">Our partners</a></li>
+          <li><a href="#team">Meet the team</a></li>
+          <li><a href="#more">Find out more</a></li>
+        </ul>
       </div>
     </div>
     <!-- ./Header -->
 
-    <!-- Primary marketing message -->
-    <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-5">
-                <img src="Assets/immersive.svg" class="immersive" alt="Cognitant" />
-                <h2>Immersive<br>
-                content</h2>
-                <a href="#none" role="button" data-toggle="modal" data-target="#immersive" class="more" onclick="ga('send', 'event', 'top', 'immersive-content');">more +</a>
-              </div>
-              <div class="col-md-2">
-                <img src="Assets/plus.svg" class="plus" alt="Cognitant" />
-              </div>
-              <div class="col-md-5">
-                <img src="Assets/improved.svg" class="improved" alt="Cognitant" />
-                <h2>Improved access to relevant information</h2>
-                <a href="#none" role="button" data-toggle="modal" data-target="#improved" class="more" onclick="ga('send', 'event', 'top', 'relevant-info');">more +</a>
+    <!-- What we do -->
+    <div id="what-we-do">
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-5">
+                  <img src="Assets/immersive.svg" class="immersive" alt="Cognitant" />
+                  <h2>Immersive<br>
+                  content</h2>
+                  <a href="#none" role="button" data-toggle="modal" data-target="#immersive" class="more" onclick="ga('send', 'event', 'top', 'immersive-content');">more +</a>
+                </div>
+                <div class="col-md-2">
+                  <img src="Assets/plus.svg" class="plus" alt="Cognitant" />
+                </div>
+                <div class="col-md-5">
+                  <img src="Assets/improved.svg" class="improved" alt="Cognitant" />
+                  <h2>Improved access to relevant information</h2>
+                  <a href="#none" role="button" data-toggle="modal" data-target="#improved" class="more" onclick="ga('send', 'event', 'top', 'relevant-info');">more +</a>
+                </div>
               </div>
             </div>
           </div>
@@ -179,7 +186,17 @@
     	</div>
     </footer>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Hamburgers script -->
+    <script>
+      function toggleActive() {
+        var hamburgers = document.getElementsByClassName("hamburger")
+        hamburgers[0].classList.toggle("is-active")
+        console.log(hamburgers[0].classList)
+      }
+    </script>
 
+    <!-- JQUERY & BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,3 +1,35 @@
-.html, .body { font-family: 'Montserrat', sans-serif; }
+html, body { font-family: 'Montserrat', sans-serif; text-align: center; }
+body p { text-align: left; }
+.white { color: #fff}
 
-.header { background-color: #fdb834; margin: 30px; }
+#header {
+  padding-top: 5px;
+  background-color: #fdb834;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.header-row { display: flex; align-items: center; }
+.header-row .leaf { height: 12vw; transform: translateY(1.25vw);}
+.header-row .header-title img { height: 10vw; }
+.header-row h2 { padding-top: 0.75vw; font-size: 2vw; }
+.header-title { transform: translateX(-4vw); margin-left: auto; margin-right: auto; color: #686321; }
+.hamburger { padding: 0px; }
+.hamburger span { color: white; }
+
+#nav-menu {
+  background-color: #fff
+}
+.nav-menu-list { padding: 0px; list-style: none; height: 100vh; display: flex; flex-direction: column; padding-top: 50px; }
+.nav-menu-list li { font-size: 3vw; padding: 10px; }
+
+#what-we-do {
+  padding-top: 12vw;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
+}
