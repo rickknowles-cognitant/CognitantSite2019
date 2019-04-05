@@ -58,7 +58,7 @@ h4 { color: #777; }
   content: "";
   background-image: url("../assets/health-skull.jpg");
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.3;
   top: 0;
   left: 0;
   bottom: 0;
@@ -84,6 +84,23 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #what-we-do {
   background-image: url("../assets/vr-woman.jpg");
   background-size: cover;
+}
+#what-we-do .container {
+    padding-left: 40%;
+}
+#what-we-do p { padding-left: 10%; }
+
+#healthinote { background-color: #f2f2f2 }
+
+.value-hovers { display: flex; flex-wrap: wrap; justify-content: center; }
+.value-hovers li {
+  list-style-type: none;
+  align-self: flex-start;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
 }
 
 .footer {
