@@ -2,7 +2,7 @@ html, body { font-family: 'Montserrat', sans-serif; text-align: center; color: #
 p { text-align: left; }
 h1, h2 { color: #686321; }
 h3 { color: #fdb834; }
-h4 { color: #266491; }
+h4 { color: #777; }
 .section {
   min-height: 100vh;
   padding-top: 150px;
@@ -24,11 +24,10 @@ h4 { color: #266491; }
 .next-page a {
   height: 50px;
   padding: 8px;
-  border: solid;
-  border-width: 2px 2px 0px 2px;
-  border-color: #fdb834;
-  background-color: #266491;
-  color: white;
+  background-color: #fdb834;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #266491;
 }
 
 #header {
@@ -40,7 +39,7 @@ h4 { color: #266491; }
   box-shadow: 0px 2px 3px #888;
 }
 
-.header-row { display: flex; align-items: center; height: 20vw; max-height: 150px; }
+.header-row { display: flex; align-items: center; height: 20vw; max-height: 120px; }
 .header-row .leaf { height: 14vw; max-height: 120px; align-self: flex-end; }
 .header-row .header-title img { height: 10vw; max-height: 80px; }
 .header-row h2 { padding-top: 0.75vw; font-size: 18px; }
@@ -49,10 +48,10 @@ h4 { color: #266491; }
 .hamburger span { color: white; }
 
 #nav-menu {
-  background-color: #fff;
+  background-color: white;
 }
-.nav-menu-list { padding: 0px; padding-top: 30px; list-style: none; display: flex; flex-direction: column; justify-content: space-around; }
-.nav-menu-list li { font-size: 3.5vh; padding: 10px; }
+.nav-menu-list { padding: 0px; padding-top: 30px; list-style: none; display: flex; flex-direction: column; }
+.nav-menu-list li { font-size: 3.5vh; padding: 14px; }
 .nav-menu-list a { color: #266491; }
 
 #our-mission::after {
