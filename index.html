@@ -66,12 +66,12 @@
       </div>
       <div class="collapse" id="nav-menu">
         <ul class="nav-menu-list">
-          <li><a href="#mission">Our mission</a></li>
-          <li><a href="#what-we-do">What we do</a></li>
-          <li><a href="#case-studies">Case studies & testimonials</a></li>
-          <li><a href="#partners">Our partners</a></li>
-          <li><a href="#team">Meet the team</a></li>
-          <li><a href="#more">Find out more</a></li>
+          <li><a type="button" onclick="navClick()" href="#our-mission">Our mission</a></li>
+          <li><a type="button" onclick="navClick()" href="#what-we-do">What we do</a></li>
+          <li><a type="button" onclick="navClick()" href="#case-studies">Case studies & testimonials</a></li>
+          <li><a type="button" onclick="navClick()" href="#partners">Our partners</a></li>
+          <li><a type="button" onclick="navClick()" href="#team">Meet the team</a></li>
+          <li><a type="button" onclick="navClick()" href="#more">Find out more</a></li>
         </ul>
         <footer class="footer nav-menu-footer">
           <div class="container">
@@ -79,10 +79,10 @@
             <a href="mailto:hello@cognitant.com" class="email"  onclick="ga('send', 'event', 'contact', 'mailhello');">hello@cognitant.com</a>
             <div class="social-media">
               <a href="https://www.linkedin.com/company/cognitant/" onclick="ga('send', 'event', 'social', 'linkedin');">
-                <img src="Assets/li.svg" class="li" alt="LinkedIn" />
+                <img src="assets/li.svg" class="li" alt="LinkedIn" />
               </a>
               <a href="https://twitter.com/Cognitant" onclick="ga('send', 'event', 'social', 'twitter');">
-                <img src="Assets/tw.svg" class="tw" alt="Twitter" />
+                <img src="assets/tw.svg" class="tw" alt="Twitter" />
               </a>
             </div>
             <hr>
@@ -91,47 +91,100 @@
         </footer>
       </div>
     </div>
-    <!-- ./Header -->
+    <!-- Header -->
+
+    <!-- Our mission -->
+    <a name="#our-mission">&nbsp;</a>
+    <div id="our-mission" class="section">
+      <div class="container">
+
+        <h2>Our mission</h2>
+        <hr>
+        <h4>'Helping people to understand & take control of their health'</h4>
+        <br>
+
+        <h3>The global problem</h3>
+        The world’s population is growing and more of us suffer from long term conditions. By the age of 50 more than half of us will have at least one long term condition. Healthcare services around the world are struggling to meet the needs and demands of the 21st Century.
+      </div>
+    </div>
+    <!-- Our mission -->
+
+    <!-- Global problem -->
+    <a class="anchor" name="#global-problem">&nbsp;</a>
+    <div id="global-problem" class="section"
+      <h3>The global healthcare picture</h3>
+      <h2>Services under pressure.</h2>
+      <hr>
+
+      <ul class="infographics">
+        <li>
+          <div class="image">
+            <img src="assets/male-solid.svg" class="person-img" alt="person-img" />
+            <img src="assets/male-solid.svg" class="person-img" alt="person-img" />
+            <img src="assets/male-solid.svg" class="person-img" alt="person-img" />
+            <img src="assets/male-solid.svg" class="person-img" alt="person-img" />
+          </div>
+          <div class='text'>
+            Increased population and chronic disease burden
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="assets/stethoscope-solid.svg" class="stethoscope-img" alt="stethoscope-img" />
+          </div>
+          <div class="text">
+            Overwhelmed services and short consultation times
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img src="assets/frown-solid.svg" class="sfrown-img" alt="frown-img" />
+          </div>
+          <div class="text">
+            Poor patient satisfaction and outcomes
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Global problem -->
+
+    <!-- WHO quote -->
+    <a class="anchor" name="#who-quote">&nbsp;</a>
+    <div id="who-quote" class="section">
+      <div class="container">
+        <h3>Addressing the problem</h3>
+        <hr>
+        <p>
+          We need to change how we interact with healthcare services. Waiting until we feel unwell is often leaving it too late. We all need to manage our own health to avoid unnecessary complications and reduce the impact of ill health. To do that we need to be better informed about our health, diseases and treatment. We have access to an overwhelming volume of information online but how do we know what information to trust?
+          <br>
+          <br>
+          “Communication of accurate information to the public is essential to minimise and tackle the impact of chronic disease through empowering people affected, enabling them to have a greater role in decisions about their care and assisting them with self-management of their condition”
+        </p>
+        <br>
+        <strong>World Health Organisation</strong>
+      </div>
+    </div>
+    <!-- WHO quote -->
 
     <!-- What we do -->
-    <div id="what-we-do">
-      <div class="jumbotron">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="row">
-                <div class="col-md-5">
-                  <img src="Assets/immersive.svg" class="immersive" alt="Cognitant" />
-                  <h2>Immersive<br>
-                  content</h2>
-                  <a href="#none" role="button" data-toggle="modal" data-target="#immersive" class="more" onclick="ga('send', 'event', 'top', 'immersive-content');">more +</a>
-                </div>
-                <div class="col-md-2">
-                  <img src="Assets/plus.svg" class="plus" alt="Cognitant" />
-                </div>
-                <div class="col-md-5">
-                  <img src="Assets/improved.svg" class="improved" alt="Cognitant" />
-                  <h2>Improved access to relevant information</h2>
-                  <a href="#none" role="button" data-toggle="modal" data-target="#improved" class="more" onclick="ga('send', 'event', 'top', 'relevant-info');">more +</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- what we do -->
-    <div id="services">
+    <a class="anchor" name="#what-we-do">&nbsp;</a>
+    <div id="what-we-do" class="section">
       <div class="container">
-        <h2>What we do</h2>
+        <h3>What we do</h3>
         <hr>
-        <p>Cognitant helps people to better understand their health.<br>
-        We create immersive content, and connect patients to relevant information endorsed by doctors.<br>
-        Our aim is to help doctors and patients make the most of their valuable consultation time.</p>
+        We enable people to understand their health and treatment in two ways:
+        <br><br>
+        <h2>1. Health information in 3D</h2><br>
+        <p>
+          Cognitant produces visual and interactive health information in 3D for patients to view on their own smartphones, tablets, computers or using virtual reality headsets (at home or in the clinic). These 3D experiences answer questions such as “what causes my condition?”, “how does this medicine work?” and “how can I avoid complications” and are easy for people of all ages and backgrounds to understand. The ability to transport people into a virtual world means that complex information can be visualised and explained clearly and effectively.
+          <br><br>
+          We work with patients, doctors and health professionals to develop information and experiences that enable them to make the most of each consultation and for patients to make informed decisions about their own health.
+          <br>
+        </p>
+        View our case studies and testimonials to see example programmes.
       </div>
     </div>
-    <!-- what we do -->
+    <!-- What we do -->
 
     <!-- meet the team -->
     <div id="team">
@@ -191,10 +244,10 @@
         <a href="mailto:hello@cognitant.com" class="email"  onclick="ga('send', 'event', 'contact', 'mailhello');">hello@cognitant.com</a>
     	  <div class="social-media">
     		  <a href="https://www.linkedin.com/company/cognitant/" onclick="ga('send', 'event', 'social', 'linkedin');">
-            <img src="Assets/li.svg" class="li" alt="LinkedIn" />
+            <img src="assets/li.svg" class="li" alt="LinkedIn" />
           </a>
     		  <a href="https://twitter.com/Cognitant" onclick="ga('send', 'event', 'social', 'twitter');">
-            <img src="Assets/tw.svg" class="tw" alt="Twitter" />
+            <img src="assets/tw.svg" class="tw" alt="Twitter" />
           </a>
     	  </div>
     	  <hr>
@@ -207,7 +260,11 @@
       function toggleActive() {
         var hamburgers = document.getElementsByClassName("hamburger")
         hamburgers[0].classList.toggle("is-active")
-        console.log(hamburgers[0].classList)
+      }
+
+      function navClick() {
+        var hamburgers = document.getElementsByClassName("hamburger")
+        hamburgers[0].click()
       }
     </script>
 
