@@ -1,19 +1,34 @@
-html, body { font-family: 'Montserrat', sans-serif; text-align: center; font-size: 18px; }
+html, body { font-family: 'Montserrat', sans-serif; text-align: center; color: #777; font-size: 18px; scroll-behavior: smooth; }
 p { text-align: left; }
-h1, h2, h3 { color: #686321; }
-a.anchor {
-  position: relative;
-  top:-500px;
-}
+h1, h2 { color: #686321; }
+h3 { color: #fdb834; }
+h4 { color: #266491; }
 .section {
   min-height: 100vh;
-  padding-top: 50px;
+  padding-top: 150px;
   padding-bottom: 50px;
   overflow: hidden;
   z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+.next-page {
+  width: 100%;
+  position:absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.next-page a {
+  height: 50px;
+  padding: 8px;
+  border: solid;
+  border-width: 2px 2px 0px 2px;
+  border-color: #fdb834;
+  background-color: #266491;
+  color: white;
 }
 
 #header {
@@ -21,7 +36,7 @@ a.anchor {
   background-color: #fdb834;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0px 2px 3px #888;
 }
 
@@ -40,14 +55,11 @@ a.anchor {
 .nav-menu-list li { font-size: 3.5vh; padding: 10px; }
 .nav-menu-list a { color: #266491; }
 
-#our-mission {
-  padding-top: 20vw;
-}
 #our-mission::after {
   content: "";
   background-image: url("../assets/health-skull.jpg");
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -55,7 +67,12 @@ a.anchor {
   position: absolute;
   z-index: -1;
 }
-#our-mission, a { top: 0; }
+
+#global-problem p {
+  color: #fdb834;
+  text-align: center;
+  margin: 0px;
+}
 
 ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color: white; display: flex; justify-content: center; flex-wrap: wrap; }
 .infographics li { background-color: #266491; border-radius: 10px; margin: 20px; padding: 20px; width: 260px; }
@@ -66,18 +83,8 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 }
 
 #what-we-do {
-
-}
-#what-we-do::after {
-  content: "";
   background-image: url("../assets/vr-woman.jpg");
   background-size: cover;
-  opacity: 0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: relative;
 }
 
 .footer {

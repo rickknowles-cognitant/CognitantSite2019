@@ -66,12 +66,12 @@
       </div>
       <div class="collapse" id="nav-menu">
         <ul class="nav-menu-list">
-          <li><a type="button" onclick="navClick()" href="#our-mission">Our mission</a></li>
-          <li><a type="button" onclick="navClick()" href="#what-we-do">What we do</a></li>
-          <li><a type="button" onclick="navClick()" href="#case-studies">Case studies & testimonials</a></li>
-          <li><a type="button" onclick="navClick()" href="#partners">Our partners</a></li>
-          <li><a type="button" onclick="navClick()" href="#team">Meet the team</a></li>
-          <li><a type="button" onclick="navClick()" href="#more">Find out more</a></li>
+          <li><a onclick="navClick()" href="#our-mission">Our mission</a></li>
+          <li><a onclick="navClick()" href="#what-we-do">What we do</a></li>
+          <li><a onclick="navClick()" href="#case-studies">Case studies & testimonials</a></li>
+          <li><a onclick="navClick()" href="#partners">Our partners</a></li>
+          <li><a onclick="navClick()" href="#team">Meet the team</a></li>
+          <li><a onclick="navClick()" href="#more">Find out more</a></li>
         </ul>
         <footer class="footer nav-menu-footer">
           <div class="container">
@@ -94,8 +94,8 @@
     <!-- Header -->
 
     <!-- Our mission -->
-    <a name="#our-mission">&nbsp;</a>
     <div id="our-mission" class="section">
+      <a name="#our-mission">&nbsp;</a>
       <div class="container">
 
         <h2>Our mission</h2>
@@ -105,14 +105,18 @@
 
         <h3>The global problem</h3>
         The world’s population is growing and more of us suffer from long term conditions. By the age of 50 more than half of us will have at least one long term condition. Healthcare services around the world are struggling to meet the needs and demands of the 21st Century.
+
+      </div>
+      <div class="next-page">
+        <a href="#global-problem">The Global Healthcare Picture</a>
       </div>
     </div>
     <!-- Our mission -->
 
     <!-- Global problem -->
-    <a class="anchor" name="#global-problem">&nbsp;</a>
-    <div id="global-problem" class="section"
-      <h3>The global healthcare picture</h3>
+    <div id="global-problem" class="section">
+      <a class="anchor" name="#global-problem">&nbsp;</a>
+      <p>The global healthcare picture</p>
       <h2>Services under pressure.</h2>
       <hr>
 
@@ -145,6 +149,9 @@
           </div>
         </li>
       </ul>
+      <div class="next-page">
+        <a href="#who-quote">Addressing the problem</a>
+      </div>
     </div>
     <!-- Global problem -->
 
@@ -163,12 +170,15 @@
         <br>
         <strong>World Health Organisation</strong>
       </div>
+      <div class="next-page">
+        <a href="#what-we-do">What we do</a>
+      </div>
     </div>
     <!-- WHO quote -->
 
     <!-- What we do -->
-    <a class="anchor" name="#what-we-do">&nbsp;</a>
     <div id="what-we-do" class="section">
+      <a class="anchor" name="#what-we-do">&nbsp;</a>
       <div class="container">
         <h3>What we do</h3>
         <hr>
@@ -183,11 +193,15 @@
         </p>
         View our case studies and testimonials to see example programmes.
       </div>
+      <div class="next-page">
+        <a href="#what-we-do">What we do</a>
+      </div>
     </div>
     <!-- What we do -->
 
     <!-- meet the team -->
     <div id="team">
+      <a class="anchor" name="#team">&nbsp;</a>
       <div class="container">
         <h2>Meet the team</h2>
         <hr>
@@ -255,7 +269,7 @@
     	</div>
     </footer>
 
-    <!-- Hamburgers script -->
+    <!-- Custom hamburger, nav and scroll scripts -->
     <script>
       function toggleActive() {
         var hamburgers = document.getElementsByClassName("hamburger")
