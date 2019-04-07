@@ -1,12 +1,12 @@
 html, body { font-family: 'Montserrat', sans-serif; text-align: center; color: #777; font-size: 18px; scroll-behavior: smooth; }
 p { text-align: left; }
 h1, h2 { color: #686321; }
-h3 { color: #fdb834; }
-h4 { color: #777; }
+h3, h4 { color: #777; }
+hr { max-width: 300px; height: 2px; background-color: #777; border-radius: 2px; }
 .section {
   min-height: 100vh;
   padding-top: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   overflow: hidden;
   z-index: 1;
   display: flex;
@@ -24,10 +24,12 @@ h4 { color: #777; }
 .next-page a {
   height: 50px;
   padding: 8px;
+  padding-top: 13px;
   background-color: #fdb834;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: #266491;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  box-shadow: 0px 2px 3px #999;
 }
 
 #header {
@@ -38,7 +40,6 @@ h4 { color: #777; }
   z-index: 2;
   box-shadow: 0px 2px 3px #888;
 }
-
 .header-row { display: flex; align-items: center; height: 20vw; max-height: 120px; }
 .header-row .leaf { height: 14vw; max-height: 120px; align-self: flex-end; }
 .header-row .header-title img { height: 10vw; max-height: 80px; }
@@ -66,7 +67,6 @@ h4 { color: #777; }
   position: absolute;
   z-index: -1;
 }
-
 #global-problem p {
   color: #fdb834;
   text-align: center;
@@ -74,7 +74,7 @@ h4 { color: #777; }
 }
 
 ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color: white; display: flex; justify-content: center; flex-wrap: wrap; }
-.infographics li { background-color: #266491; border-radius: 10px; margin: 20px; padding: 20px; width: 260px; }
+.infographics li { background-color: #266491; box-shadow: 0px 2px 3px #888; border-radius: 10px; margin: 20px; padding: 20px; width: 260px; }
 .infographics img { height: 50px; padding-bottom: 10px; }
 
 #who-quote {
@@ -86,22 +86,60 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
   background-size: cover;
 }
 #what-we-do .container {
-    padding-left: 40%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0px 2px 3px #888;
 }
-#what-we-do p { padding-left: 10%; }
 
 #healthinote { background-color: #f2f2f2 }
 
-.value-hovers { display: flex; flex-wrap: wrap; justify-content: center; }
+.value-hovers { display: flex; flex-wrap: wrap; justify-content: center; padding: 0px; }
+.value-hovers p { color: #266491; text-align: center; margin: 0px; padding-bottom: 5px; }
+.value-hovers h4 { padding: 0px; margin: 0px; }
 .value-hovers li {
   list-style-type: none;
   align-self: flex-start;
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  width: 300px;
-  padding: 10px;
-  margin: 10px;
 }
+.value-hovers li a {
+ display:block;
+ background-color: #f2f2f2;
+ color: #777;
+ box-shadow: 0px 2px 3px #999;
+ border-radius: 20px;
+ width: 300px;
+ padding: 10px;
+ margin: 10px;
+}
+.value-hovers li a:hover, .value-hovers li a:focus {
+ background-color: #eaeaea;
+ color: #777;
+ text-decoration: none;
+}
+
+#case-studies .scrolling-quotes { display: flex; justify-content: center; flex-wrap: wrap; padding: 0px; }
+#case-studies .scrolling-quotes li {
+  list-style-type: none;
+  margin: 20px;
+  width: 200px;
+}
+.quote p { text-align: center;}
+
+#our-partners {
+    background-image: url("../assets/sky-parachutes.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+#our-partners hr { background-color: white; }
+#our-partners h3 { color: white; }
+.partners { display: flex; flex-wrap: wrap; justify-content: center; padding: 0px; }
+.partners li { list-style-type: none; margin: 80px; }
+
+#team img { height: 200px; border-radius: 50px; }
+.team-member { display: flex; align-items: center; }
+.team-member * { margin: 10px; }
 
 .footer {
   width: 100%;
