@@ -67,12 +67,14 @@ hr { max-width: 300px; height: 2px; background-color: #777; border-radius: 2px; 
   position: absolute;
   z-index: -1;
 }
+
+#global-problem { background-image: url('../assets/health-services.png'); background-size: cover; }
+#global-problem .text-box { background-color: rgba(255, 255, 255, 0.8); border-radius: 20px; margin-left: auto; margin-right: auto; padding: 20px; }
 #global-problem p {
   color: #fdb834;
   text-align: center;
   margin: 0px;
 }
-
 ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color: white; display: flex; justify-content: center; flex-wrap: wrap; }
 .infographics li { background-color: #266491; box-shadow: 0px 2px 3px #888; border-radius: 10px; margin: 20px; padding: 20px; width: 260px; }
 .infographics img { height: 50px; padding-bottom: 10px; }
@@ -106,14 +108,18 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
  display:block;
  background-color: #f2f2f2;
  color: #777;
- box-shadow: 0px 2px 3px #999;
+ box-shadow: 0px 2px 0px #266491;
+ border: solid;
+ border-width: 2px;
+ border-color: #266491;
  border-radius: 20px;
  width: 300px;
  padding: 10px;
- margin: 10px;
+ margin: 20px;
 }
 .value-hovers li a:hover, .value-hovers li a:focus {
  background-color: #eaeaea;
+ box-shadow: 0px 0px 0px #266491;
  color: #777;
  text-decoration: none;
 }
