@@ -55,21 +55,8 @@ hr { max-width: 150px; height: 2px; background-color: #777; border-radius: 2px; 
 .nav-menu-list li { font-size: 3.5vh; padding: 14px; }
 .nav-menu-list a { color: #266491; }
 
-#our-mission::after {
-  content: "";
-  background-image: url("../assets/health-skull.jpg");
-  background-size: cover;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-#global-problem { background-image: url('../assets/health-services.png'); background-size: cover; }
-#global-problem .text-box { background-color: rgba(255, 255, 255, 0.8); border-radius: 20px; margin-left: auto; margin-right: auto; padding: 20px; }
+#global-problem { background-image: url('../assets/surgeon.jpeg'); background-size: cover; }
+#global-problem .text-box { background-color: rgba(255, 255, 255, 1); border-radius: 20px; margin-left: auto; margin-right: auto; padding: 20px; }
 #global-problem p {
   color: #fdb834;
   text-align: center;
@@ -82,9 +69,10 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #who-quote {
   background-color: #f2f2f2;
 }
+#who-quote .quote { margin-top: 40px; font-style: italic; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
 #what-we-do {
-  background-image: url("../assets/clouds-vr.jpg");
+  background-image: url("../assets/health-skull.jpg");
   background-size: cover;
 }
 #what-we-do .container {
@@ -131,7 +119,7 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
   margin: 20px;
   width: 200px;
 }
-.quote p { text-align: center;}
+#case-studies .quote p { font-size: 16px; text-align: center;}
 
 #our-partners {
     background-image: url("../assets/sky-parachutes.jpg");
