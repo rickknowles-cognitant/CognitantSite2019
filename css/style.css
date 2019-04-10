@@ -1,8 +1,9 @@
-html, body { font-family: 'Montserrat', sans-serif; text-align: center; color: #777; font-size: 18px; scroll-behavior: smooth; }
+html, body { font-family: 'Montserrat', sans-serif; text-align: center; color: #444; font-size: 18px; scroll-behavior: smooth; }
 p { text-align: left; }
-h1, h2 { color: #686321; }
-h3, h4 { color: #777; }
-hr { max-width: 150px; height: 2px; background-color: #777; border-radius: 2px; }
+h1, h2, h3 { color: #686321; font-weight: 500; }
+h4 { color: #777; }
+hr { max-width: 150px; height: 1px; background-color: #fdb834; border-radius: 2px; }
+.bottom-right { position: fixed; bottom: 0; right: 0; width: 20vw; max-width: 180px; }
 .section {
   min-height: 100vh;
   padding-top: 150px;
@@ -55,6 +56,8 @@ hr { max-width: 150px; height: 2px; background-color: #777; border-radius: 2px; 
 .nav-menu-list li { font-size: 3.5vh; padding: 14px; }
 .nav-menu-list a { color: #266491; }
 
+#our-mission { background-position: bottom right; background-repeat: no-repeat; background-size: 200px; }
+
 #global-problem { background-image: url('../assets/surgeon.jpeg'); background-size: cover; }
 #global-problem .text-box { background-color: rgba(255, 255, 255, 1); border-radius: 20px; margin-left: auto; margin-right: auto; padding: 20px; }
 #global-problem p {
@@ -69,21 +72,25 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #who-quote {
   background-color: #f2f2f2;
 }
-#who-quote .quote { margin-top: 40px; font-style: italic; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
+#who-quote .quote { font-weight: bold; color: #444; margin-top: 40px; font-style: italic; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
 #what-we-do {
   background-image: url("../assets/health-skull.jpg");
   background-size: cover;
 }
 #what-we-do .container {
-  max-width: 500px;
+  max-width: 640px;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   box-shadow: 0px 2px 3px #888;
 }
 
-#healthinote { background-color: #f2f2f2 }
+#healthinote { background-color: #f2f2f2; }
+#healthinote li { text-align: left; }
+#healthinote .text { max-width: 600px; }
+.healthinote-row { display: flex; justify-content: center; flex-wrap: wrap; }
+.healthinote-img { height: 500px; margin: 20px; }
 
 .value-hovers { display: flex; flex-wrap: wrap; justify-content: center; padding: 0px; }
 .value-hovers p { color: #266491; text-align: center; margin: 0px; padding-bottom: 5px; }
@@ -117,8 +124,9 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #case-studies .scrolling-quotes li {
   list-style-type: none;
   margin: 20px;
-  width: 200px;
+  width: 400px;
 }
+#case-studies h4 { color: #fdb834; }
 #case-studies .quote p { font-size: 16px; text-align: center;}
 
 #our-partners {
@@ -150,7 +158,7 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #find-more form { font-size: 10px; width: 80vw; max-width: 600px; background-color: white; padding: 20px; border-radius: 10px; margin-top: 10px; }
 .cbGroup { display: flex; }
 .cbGroup input { width: auto; margin-right: 5px; }
-.find-out-more-row { display: flex; }
+.find-out-more-row { display: flex; justify-content: center; flex-wrap: wrap; }
 .find-out-more-left { text-align: left; padding-right: 30px; }
 .find-out-more-right { display: flex; flex-direction: column; }
 .twitter-follow-button { margin-top: 20px; margin-left: auto; margin-right: auto; }
