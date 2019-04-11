@@ -6,19 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Jonathon Suh's hamburgers -->
     <link rel="stylesheet" type="text/css" href="css/hamburger.css" >
 
     <!-- Cognitant CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" >
-
     <title>Cognitant</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./assets/favicon-32x32.png" sizes="32x32" />
+
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script type="text/javascript">
       if (location.href.indexOf('//preview.') != -1) {
@@ -484,6 +489,16 @@
               <h4>Get in touch</h4>
               <form action="https://contactrequest.cognitant.com/api/contact/" method="POST" id="contactus">
                 <div class="errorBlock"></div>
+                <div class="form-group">
+                  <label for="phone">Are you:<span style="color:red">*</span></label>
+                  <select name="Are you:">
+                    <option value="patient">A patient</option>
+                    <option value="hcp">A healthcare professional</option>
+                    <option value="fiat">A commissioner</option>
+                    <option value="audi">From industry</option>
+                    <option value="audi">An investor</option>
+                  </select>
+                </div>
                 <div class="form-group">
                   <label for="Name">Name<span style="color:red">*</span></label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Enter name">

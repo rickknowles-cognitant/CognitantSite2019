@@ -49,11 +49,9 @@ hr { max-width: 150px; height: 1px; background-color: #fdb834; border-radius: 2p
 .hamburger { padding: 0px; }
 .hamburger span { color: white; }
 
-#nav-menu {
-  background-color: white;
-}
-.nav-menu-list { padding: 0px; padding-top: 30px; list-style: none; display: flex; flex-direction: column; }
-.nav-menu-list li { font-size: 3.5vh; padding: 14px; }
+#nav-menu { background-color: white; }
+.nav-menu-list { padding: 0px; padding-top: 30px; list-style: none; display: flex; flex-direction: column; justify-content: space-between; }
+.nav-menu-list li { font-size: 3.5vh; padding: 20px;}
 .nav-menu-list a { color: #266491; }
 
 #our-mission { background-position: bottom right; background-repeat: no-repeat; background-size: 200px; }
@@ -156,6 +154,7 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #find-more p { margin-bottom: 40px; }
 #find-more input[type="text"] { font-size: 14px; }
 #find-more form { font-size: 10px; width: 80vw; max-width: 600px; background-color: white; padding: 20px; border-radius: 10px; margin-top: 10px; }
+#find-more select { height: 35px; margin: 5px; }
 .cbGroup { display: flex; }
 .cbGroup input { width: auto; margin-right: 5px; }
 .find-out-more-row { display: flex; justify-content: center; flex-wrap: wrap; }
