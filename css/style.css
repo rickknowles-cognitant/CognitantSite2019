@@ -254,3 +254,6 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+
+#privacy li { text-align: left; }
+#privacy h3 { padding: 20px; }
