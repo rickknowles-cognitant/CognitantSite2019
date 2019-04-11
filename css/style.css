@@ -143,7 +143,7 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 .team-members { display: flex; flex-wrap: wrap; justify-content: center; }
 .team-member { width: 450px; margin-bottom: 20px; margin-right: 20px; }
 .team-member-row img { width: 80vw; max-width: 200px; }
-.team-member-row { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
+.team-member-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
 .team-info-row { display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;}
 .team-member-row * { margin: 5px; }
 .team-member-row p { margin-left: 0px; }
