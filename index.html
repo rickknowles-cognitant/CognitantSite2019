@@ -106,8 +106,8 @@
     <!-- LEAF -->
 
     <!-- Our mission -->
-    <div id="our-mission" class="section">
-      <a class="anchor" name="#our-mission">&nbsp;</a>
+    <div id="our-mission-section" class="section">
+      <a id="our-mission" class="anchor">&nbsp;</a>
       <div class="container">
         <h2>Our Mission</h2>
         <hr>
@@ -124,9 +124,8 @@
     <!-- Our mission -->
 
     <!-- Global problem -->
-    <div id="global-problem" class="section">
-      <a class="anchor" name="#global-problem">&nbsp;</a>
-
+    <div id="global-problem-section" class="section">
+      <a id="global-problem" class="anchor">&nbsp;</a>
       <div class="text-box">
         <p>The global healthcare picture</p>
         <h2>Services under pressure.</h2>
@@ -168,8 +167,8 @@
     <!-- Global problem -->
 
     <!-- WHO quote -->
-    <div id="who-quote" class="section">
-      <a class="anchor" name="#who-quote">&nbsp;</a>
+    <div id="who-quote-section" class="section">
+      <a id="who-quote" class="anchor">&nbsp;</a>
       <div class="container">
         <h2>Addressing the problem</h2>
         <hr>
@@ -188,8 +187,8 @@
     <!-- WHO quote -->
 
     <!-- What we do -->
-    <div id="what-we-do" class="section">
-      <a class="anchor" name="#what-we-do">&nbsp;</a>
+    <div id="what-we-do-section" class="section">
+      <a id="what-we-do" class="anchor">&nbsp;</a>
       <div class="text-box">
         <h2>What we do</h2>
         <hr>
@@ -205,8 +204,8 @@
     <!-- What we do -->
 
     <!-- health in 3D -->
-    <div id="health-in-3D" class="section">
-      <a class="anchor" name="#health-in-3D">&nbsp;</a>
+    <div id="health-in-3D-section" class="section">
+      <a id="health-in-3D" class="anchor">&nbsp;</a>
       <div class="container">
         <h3>Health information in 3D</h3>
         <hr>
@@ -224,8 +223,8 @@
     <!-- Health in 3D -->
 
     <!-- healthinote -->
-    <div id="healthinote" class="section">
-      <a class="anchor" name="#healthinote">&nbsp;</a>
+    <div id="healthinote-section" class="section">
+      <a id="healthinote" class="anchor">&nbsp;</a>
       <div class="container">
         <h3>Healthinote:<br>Trusted information recommended by your doctor</h3>
         <hr>
@@ -255,8 +254,8 @@
     <!-- Healthinote -->
 
     <!-- Value for all -->
-    <div id="value-for-all" class="section">
-      <a class="anchor" name="#value-for-all">&nbsp;</a>
+    <div id="value-for-all-section" class="section">
+      <a id="value-for-all" class="anchor">&nbsp;</a>
       <div class="container">
         <h4>Value for all</h4>
         <hr>
@@ -311,8 +310,8 @@
     <!-- Value for all -->
 
     <!-- case-studies -->
-    <div id="case-studies" class="section">
-      <a class="anchor" name="#case-studies">&nbsp;</a>
+    <div id="case-studies-section" class="section">
+      <a id="case-studies" class="anchor">&nbsp;</a>
       <div class="container">
         <h3>Case studies & testimonials</h3>
         <hr>
@@ -325,6 +324,10 @@
             <h4>“Collaborating with Cognitant on a VR project has been an absolute pleasure. The team's efficiency, dedication and hard work has made the experience seamless.”</h4>
             <p>Dr John Wahba, Medical Adviser, Pharmaceutical</p>
           </li>
+          <li class="quote">
+            <h4>“There is a huge unmet need in patient education for long term conditions, and the solutions offered by Cognitant strengthen the armoury of every clinician that will allow them to improve healthcare through bespoke, digital patient education.<br>The idea of prescribing the right education for the right patent using modern, immersive and engaging techniques is a simple idea done well by Cognitant.”</h4>
+            <p>Professor and Head of Innovation, NHS Teaching Hospital</p>
+          </li>
         </ul>
       </div>
       <div class="next-page">
@@ -335,7 +338,6 @@
 
     <!-- our partners | temp commented out
     <div id="our-partners" class="section">
-      <a class="anchor" name="#our-partners">&nbsp;</a>
       <div class="container">
         <h3>Our partners</h3>
         <hr>
@@ -370,8 +372,8 @@
     our partners -->
 
     <!-- meet the team -->
-    <div id="team" class="section">
-      <a class="anchor" name="#team">&nbsp;</a>
+    <div id="team-section" class="section">
+      <a id="team" class="anchor">&nbsp;</a>
       <div class="container">
         <h2>Meet the team</h2>
         <hr>
@@ -474,8 +476,8 @@
     <!-- meet the team -->
 
     <!-- find out more -->
-    <div id="find-more" class="section">
-      <a class="anchor" name="#find-more">&nbsp;</a>
+    <div id="find-more-section" class="section">
+      <a id="find-more" class="anchor">&nbsp;</a>
       <div class="container">
         <h3>Find out more</h3>
         <hr>
@@ -591,6 +593,14 @@
         var hamburgers = document.getElementsByClassName("hamburger")
         hamburgers[0].click()
       }
+
+      document.getElementById('id')
+      $('.nav-link').click(function(){
+        divId = $(this).attr('href');
+         $('html, body').animate({
+          scrollTop: $(divId).offset().top - 54
+        }, 100);
+      });
     </script>
 
     <!-- JQUERY & BOOTSTRAP SCRIPTS -->

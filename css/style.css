@@ -3,7 +3,7 @@ p { text-align: left; }
 h1, h2, h3 { color: #686321; font-weight: 500; }
 h4 { color: #777; }
 hr { max-width: 150px; height: 1px; background-color: #fdb834; border-radius: 2px; }
-.anchor { position: absolute; top: -60px; }
+.anchor { display: block; position: absolute; top: -60px; visibility: hidden; }
 .bottom-right { position: fixed; bottom: 0; right: 0; width: 20vw; max-width: 180px; }
 .section {
   min-height: calc(100vh - 60px);
@@ -58,6 +58,7 @@ hr { max-width: 150px; height: 1px; background-color: #fdb834; border-radius: 2p
 .nav-menu li { font-size: 3.5vh; padding: 2vh; }
 .nav-menu a { color: #266491; }
 
+/* Desktop height adjustments */
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   .header-row { height: 120px; }
@@ -65,15 +66,15 @@ hr { max-width: 150px; height: 1px; background-color: #fdb834; border-radius: 2p
   .header-row .header-title img { height: 80px; }
   .padding-block { height: 120px; z-index: -1; }
   .nav-menu { height: calc(100vh - 120px); }
-  .anchor { position: absolute; top: -120px; }
+  .anchor { display: block; position: absolute; top: -120px; visibility: hidden; }
   .section { padding-top: 60px; padding-bottom: 60px; min-height: calc(100vh - 120px);}
 }
 
-#our-mission { background-position: bottom right; background-repeat: no-repeat; background-size: 200px; }
+#our-mission-section { background-position: bottom right; background-repeat: no-repeat; background-size: 200px; }
 
-#global-problem { background-image: url('../assets/surgeon.jpeg'); background-size: cover; display: flex; flex-direction: column; align-items: center; }
-#global-problem .text-box { background-color: rgba(255, 255, 255, 1); border-radius: 20px; margin: 5px; padding: 20px; }
-#global-problem p {
+#global-problem-section { background-image: url('../assets/surgeon.jpeg'); background-size: cover; display: flex; flex-direction: column; align-items: center; }
+#global-problem-section .text-box { background-color: rgba(255, 255, 255, 1); border-radius: 20px; margin: 5px; padding: 20px; }
+#global-problem-section p {
   color: #fdb834;
   text-align: center;
   margin: 0px;
@@ -82,19 +83,19 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 .infographics li { background-color: #266491; box-shadow: 0px 2px 3px #888; border-radius: 10px; margin: 20px; padding: 20px; width: 260px; }
 .infographics img { height: 50px; padding-bottom: 10px; }
 
-#who-quote {
+#who-quote-section {
   background-color: #f2f2f2;
 }
-#who-quote .quote { font-weight: bold; color: #444; margin-top: 40px; font-style: italic; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
+#who-quote-section .quote { font-weight: bold; color: #444; margin-top: 40px; font-style: italic; font-size: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-#what-we-do {
+#what-we-do-section {
   background-image: url("../assets/health-skull.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#what-we-do .text-box {
+#what-we-do-section .text-box {
   max-width: 640px;
   margin: 10px;
   padding: 15px;
@@ -104,11 +105,11 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
   border-radius: 20px;
   box-shadow: 0px 2px 3px #888;
 }
-#what-we-do .container a { color: #266491; }
+#what-we-do-section .container a { color: #266491; }
 
-#healthinote { background-color: #f2f2f2; }
-#healthinote li { text-align: left; }
-#healthinote .text { max-width: 600px; }
+#healthinote-section { background-color: #f2f2f2; }
+#healthinote-section li { text-align: left; }
+#healthinote-section .text { max-width: 600px; }
 .healthinote-row { display: flex; justify-content: center; flex-wrap: wrap; }
 .healthinote-img { height: 500px; margin: 20px; }
 
@@ -139,28 +140,28 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
  text-decoration: none;
 }
 
-#case-studies { background-color: #f2f2f2 }
-#case-studies .scrolling-quotes { display: flex; justify-content: center; flex-wrap: wrap; padding: 0px; }
-#case-studies .scrolling-quotes li {
+#case-studies-section { background-color: #f2f2f2 }
+#case-studies-section .scrolling-quotes { display: flex; justify-content: center; flex-wrap: wrap; padding: 0px; }
+#case-studies-section .scrolling-quotes li {
   list-style-type: none;
   margin: 20px;
-  width: 400px;
+  width: 450px;
 }
-#case-studies h4 { color: #fdb834; }
-#case-studies .quote p { font-size: 16px; text-align: center;}
+#case-studies-section h4 { color: #fdb834; }
+#case-studies-section .quote p { font-size: 16px; text-align: center;}
 
-#our-partners {
+#our-partners-section {
     background-image: url("../assets/sky-parachutes.jpg");
     background-size: cover;
     background-attachment: fixed;
     color: white;
 }
-#our-partners hr { background-color: white; }
-#our-partners h3 { color: white; }
+#our-partners-section hr { background-color: white; }
+#our-partners-section h3 { color: white; }
 .partners { display: flex; flex-wrap: wrap; justify-content: center; padding: 0px; }
 .partners li { list-style-type: none; margin: 80px; }
 
-#team .text { text-align: left; }
+#team-section .text { text-align: left; }
 .team-members { display: flex; flex-wrap: wrap; justify-content: center; }
 .team-member { width: 450px; margin-bottom: 20px; margin-right: 20px; }
 .team-member-row img { width: 80vw; max-width: 200px; }
@@ -171,12 +172,12 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 .team-info-row img { width: 20px; }
 .team-info-row a { color: #266491; }
 
-#find-more { background-color: #f2f2f2 }
-#find-more a { color: #266491; }
-#find-more p { margin-bottom: 40px; }
-#find-more input[type="text"] { font-size: 14px; }
-#find-more form { font-size: 10px; width: 80vw; max-width: 600px; background-color: white; padding: 20px; border-radius: 10px; margin-top: 10px; }
-#find-more select { height: 35px; margin: 5px; }
+#find-more-section { background-color: #f2f2f2 }
+#find-more-section a { color: #266491; }
+#find-more-section p { margin-bottom: 40px; }
+#find-more-section input[type="text"] { font-size: 14px; }
+#find-more-section form { font-size: 10px; width: 80vw; max-width: 600px; background-color: white; padding: 20px; border-radius: 10px; margin-top: 10px; }
+#find-more-section select { height: 35px; margin: 5px; }
 .cbGroup { display: flex; }
 .cbGroup input { width: auto; margin-right: 5px; }
 .find-out-more-row { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
@@ -184,7 +185,6 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 .find-out-more-right { display: flex; flex-direction: column; margin: 10px; }
 .twitter-follow-button { margin-top: 20px; margin-left: auto; margin-right: auto; }
 .linkedin-follow iframe { width: 100px; height: 44px; margin-top: 20px; margin-left: auto; margin-right: auto; }
-
 
 .footer {
   width: 100%;
@@ -229,7 +229,6 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 	margin-bottom: 20px;
 	opacity: 0.15
 }
-
 .footer .li {
 	width: 28px;
 	height: 27px;
