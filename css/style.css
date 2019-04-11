@@ -79,6 +79,9 @@ ul.infographics { padding: 0px; padding-top: 20px; list-style-type: none; color:
 #what-we-do {
   background-image: url("../assets/health-skull.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #what-we-do .container {
   max-width: 640px;
