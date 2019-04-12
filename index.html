@@ -325,11 +325,11 @@
             <p>Dr John Wahba, Medical Adviser, Pharmaceutical</p>
           </li>
           <li class="quote">
-            <h4>“There is a huge unmet need in patient education for long term conditions, and the solutions offered by Cognitant strengthen the armoury of every clinician that will allow them to improve healthcare through bespoke, digital patient education.<br>The idea of prescribing the right education for the right patent using modern, immersive and engaging techniques is a simple idea done well by Cognitant.”</h4>
-            <p>Professor and Head of Innovation, NHS Teaching Hospital</p>
+            <h4>“There is a huge unmet need in patient education for long term conditions, and the solutions offered by Cognitant strengthen the armoury of every clinician that will allow them to improve healthcare through bespoke, digital patient education.<br>The idea of prescribing the right education for the right patient using modern, immersive and engaging techniques is a simple idea done well by Cognitant.”</h4>
+            <p>Professor Chauhan, Director of Research and Innovation, Portsmouth Hospitals NHS Trust</p>
           </li>
           <li class="quote">
-            <h4>“This is an unique and innovative way to engage the persons living with diabetes to better understand their condition and therefore give them control of their health and their treatment”</h4>
+            <h4>“This is a unique and innovative way to engage the persons living with diabetes to better understand their condition and therefore give them control of their health and their treatment”</h4>
             <p>Dr.N.Kanumilli<br>Clinical Network Lead for Diabetes - Greater Manchester & E.Cheshire SCN</p>
           </li>
         </ul>
@@ -547,7 +547,7 @@
                   <div style="clear: both;"></div>
                 </div>
               	<div class="form-group">
-                  <div class="g-recaptcha" data-sitekey="6LcxLlAUAAAAAA_5P_Jztu2HXjn6_-eR_lliTwEF" id="recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LcxLlAUAAAAAA_5P_Jztu2HXjn6_-eR_lliTwEF&amp;co=aHR0cHM6Ly93d3cuY29nbml0YW50LmNvbTo0NDM.&amp;hl=en&amp;v=v1554100419869&amp;size=normal&amp;cb=bp74ur9zlnrr" width="304" height="78" role="presentation" name="a-rshtebrgf7eo" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+                  <div class="g-recaptcha" data-sitekey="6LcxLlAUAAAAAA_5P_Jztu2HXjn6_-eR_lliTwEF"  id="recaptcha"></div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
@@ -586,6 +586,10 @@
     	</div>
     </footer>
 
+    <!-- JQUERY & BOOTSTRAP SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <!-- Custom hamburger and nav scripts -->
     <script>
       function toggleActive() {
@@ -605,10 +609,51 @@
           scrollTop: $(divId).offset().top - 54
         }, 100);
       });
-    </script>
 
-    <!-- JQUERY & BOOTSTRAP SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- form scripts -->
+      $(document).ready(function() {
+        function testConsent(name) {
+          if ($('input#' + name).is(':checked')) {
+            return true;
+          } else {
+            $('input#' + name).parent().append('<div style="color:red" class="errorMsg">Please confirm your consent.</div>');
+            return false;
+          }
+        }
+
+        $('form#contactus').submit(function(e) {
+          e.preventDefault();
+          $('.errorMsg').remove();
+          var one = testConsent('Consent1');
+          var two = testConsent('Consent2');
+          var three = testConsent('Consent3');
+          if (!(one && two && three)) {
+            return false;
+          }
+
+          $.ajax({
+            url: $('form#contactus').attr('action'),
+            type: 'POST',
+            data: $('form#contactus').serialize(),
+            success: function(data, textStatus, jqXHR) {
+              $('#form .modal-body').html("<p>Thanks - we'll contact you shortly.</p>" +
+                "<button style='display:none' type='button' class='btn btn-default' " +
+                "id='contactusclose' data-dismiss='modal'>Close</button>");
+              setTimeout(function() {
+                location.reload();
+              }, 1000);
+            },
+            error: function(jqXHR, textStatus, errorThrown ) {
+              if (jqXHR.status === 422) {
+                Object.keys(jqXHR.responseJSON.errors).forEach(function(el) {
+                  $('form#contactus #' + el).after('<div style="color:red" class="errorMsg">' +
+                    jqXHR.responseJSON.errors[el].msg + '</div>');
+                });
+              }
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
